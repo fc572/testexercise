@@ -19,15 +19,12 @@
 	text-align: left;
 }
 
-#backgroundColor{
-	
-}
-
 #centre{
-	float:left;
+	float:right;
+	position: relative;
+  	left: -20%; /* or right 50% */
+  	text-align: left;
 	width: 60%;
-	margin-left:120px;
-	margin-bottom:30px;
 	background-color:#fecb04;
 }
 		
