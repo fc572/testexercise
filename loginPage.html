@@ -1,0 +1,47 @@
+
+<html>
+   <head>
+    <script>
+      function myLoginFunction(form) {
+         if (form.field_uname.value =="Neo") { 
+            if (form.field_pwd.value=="redpill") {              
+               document.getElementById("demo").innerHTML = "You are now logged in into the Matrix";
+               return false;
+            } 
+            else {
+               alert("You have chosen the blue pill");
+            }
+         }
+         else {  
+            alert("Invalid UserID");
+         }
+      }
+
+      function resetPage() {
+         document.getElementById("loginForm").reset();
+         document.getElementById("demo").innerHTML = '';
+      }
+
+   </script>
+   <link rel="stylesheet" type="text/css" href="style.css">
+      <title>
+         Fake login page
+      </title>
+   </head>
+   <body id="centre">
+   <p class="box">This is a page set up to help with the page object model concepts <br/>
+   The user name is Neo, the password is redpill<br/>
+   </p>
+
+   <form class="box" id="loginForm">
+      User Name: <input class="formInputFormat" type="input" size="35" id="field_uname"/><br/><br/>
+      Password: <input class="formInputFormat" type="input" size="35" name="field_pwd"/><br/><br/>
+      <button id"loginBtn" class="btnStyle" onclick="return myLoginFunction(this.form)">Log into the Matrix</button> <br/><br/>
+
+   </form>
+   <div class="box">
+      <h4 id="demo" style="color:#fecb04"></h4>
+      <button id"resetBtn" class="btnStyle" onclick="resetPage()">Reset form</button> <br/><br/>
+   </div>
+   </body>
+</html>
